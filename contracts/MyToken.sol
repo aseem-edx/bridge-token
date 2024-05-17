@@ -23,7 +23,7 @@ contract MyToken is ERC20, ERC20Burnable, Pausable, Ownable {
         address from,
         address to,
         uint256 amount
-    ) internal whenNotPaused {
+    ) internal virtual whenNotPaused {
         super._update(from, to, amount);
     }
 }
